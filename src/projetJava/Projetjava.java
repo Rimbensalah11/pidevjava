@@ -24,8 +24,8 @@ public class Projetjava {
         // TODO code application logic here
         //MyConnection conn = new MyConnection.getInstance();
 
-        Reservation r1 = new Reservation(8, 2, 5, 3);
-        Facture f1 = new Facture(7, 8, 80.5f, "yosra");
+        Reservation r1 = new Reservation(66, 2, 5, 3);
+        Facture f1 = new Facture(88, 66, 80.5f, "sylvie");
 
         ReservationCrud res = new ReservationCrud();
 
@@ -34,7 +34,7 @@ public class Projetjava {
         res.ajouterReservation(r1);
         ress.ajouterFacture(f1);
         //ress.supprimerFacture(1);
-        res.annulerReservation(8);
+        //res.annulerReservation(8);
         System.out.println(res.afficherReservation());
         System.out.println(ress.afficherFacture());
 
