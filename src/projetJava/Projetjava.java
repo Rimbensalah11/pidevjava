@@ -25,7 +25,8 @@ public class Projetjava {
         //MyConnection conn = new MyConnection.getInstance();
 
         Reservation r1 = new Reservation(66, 2, 5, 3);
-        Facture f1 = new Facture(88, 66, 80.5f, "sylvie");
+        Facture f1 = new Facture(7, 66, 80.5f, "yosra");
+        Reservation r2 = new Reservation(66, 8, 9, 4);
 
         ReservationCrud res = new ReservationCrud();
 
@@ -33,6 +34,8 @@ public class Projetjava {
 
         res.ajouterReservation(r1);
         ress.ajouterFacture(f1);
+        res.modifierReservation(r2);
+
         //ress.supprimerFacture(1);
         //res.annulerReservation(8);
         System.out.println(res.afficherReservation());

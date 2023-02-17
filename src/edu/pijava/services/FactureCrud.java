@@ -60,7 +60,7 @@ public class FactureCrud implements InterfaceCRUD  {
        List<Facture> list = new ArrayList<>();
        
      try {
-            String req = "Select f.idFacture , f.numRes , f.netApayer,u.prenom,u.nom  from facture f , users u  where u.nom= f.nomUser ";
+            String req = "Select *  from facture ";
             Statement st = conn.createStatement();
            
             ResultSet RS= st.executeQuery(req);
@@ -69,7 +69,7 @@ public class FactureCrud implements InterfaceCRUD  {
              f.setIdFacture(RS.getInt("idFacture"));
              f.setNumRes(RS.getInt("numRes"));
              f.setNetApayer(RS.getFloat("netApayer"));
-             f.setNomUser(RS.getString("nom"));
+             f.setNomUser(RS.getString("nomUser"));
              //f.setPrenomUser(RS.getString("prenom")); lezem nsob classet malek 
 
              list.add(f);
